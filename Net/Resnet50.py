@@ -113,5 +113,5 @@ if __name__ == "__main__":
     print(x.shape)
 
     # 导出onnx
-    torch.onnx.export(resnet, x, 'resnet50.onnx', verbose=True)
+    torch.onnx.export(resnet,x,'resnet50',verbose=True)
     pass
