@@ -1,6 +1,5 @@
 import torch
 from torch import nn
-from torchvision import models
 
 class BottleNeck (nn.Module):
 
@@ -12,7 +11,7 @@ class BottleNeck (nn.Module):
                               out_channels=out_channels,
                               kernel_size=1,
                               stride=stride,
-                              bias=False)
+                              bias=False)#使用BN将bias参数置False
         self.bn1 = nn.BatchNorm2d(out_channels)
         self.conv2 = nn.Conv2d(in_channels=out_channels,
                                out_channels=out_channels,
